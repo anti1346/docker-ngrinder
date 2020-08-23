@@ -11,7 +11,7 @@ services:
       - '16001:16001'
       - '12000-12009:12000-12009'
     volumes:
-    - ./docker-ngrinder-controller/ngrinder-controller-date:/opt/ngrinder-controller
+    - ./ngrinder-controller:/opt/ngrinder-controller
 
   agent:
     image: ngrinder/agent

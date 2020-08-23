@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+
+  agent:
+    image: ngrinder/agent
+    container_name: agent
+    restart: always
+    hostname: agent1
+    network_mode: 'host'

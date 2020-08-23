@@ -3,7 +3,7 @@ services:
 
   controller:
     image: ngrinder/controller
-    container_name: controller
+    container_name: ncontroller
     restart: always
     hostname: controller
     ports: 

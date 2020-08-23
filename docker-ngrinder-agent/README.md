@@ -13,3 +13,8 @@ agent.controller_host=172.31.42.90
 agent.controller_port=16001
 agent.region=NONE
 ```
+
+#### ngrinder agent 실행
+```
+docker-compose up -d
+```

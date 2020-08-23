@@ -7,5 +7,5 @@ services:
     restart: always
     hostname: nagent1
     volumes:
-    - ./ngrinder-agent:/opt/ngrinder-agent
+      - ./ngrinder-agent:/opt/ngrinder-agent
     network_mode: 'host'

@@ -9,6 +9,11 @@ $ docker cp controller:/opt/ngrinder-controller .
 $ docker rm -f controller
 ```
 
+#### ngrinder docker 실행
+```
+docker-compose up -d
+```
+
 #### ngrinder 웹 페이지 접속
 ```
 http://serverip:8888

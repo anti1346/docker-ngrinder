@@ -2,7 +2,8 @@
 
 #### ngrinder-agent download
 ```
-wget http://{ngrinder-controller-ip}:8888/agent/download/ngrinder-agent-3.5.0-3.112.72.52.tar
+wget http://{ngrinder-controller-ip}:8888/agent/download -O ngrinder-agent.tar
+tar xvf ngrinder-agent.tar
 ```
 
 #### controller server ip change

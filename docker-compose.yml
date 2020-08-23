@@ -5,7 +5,7 @@ services:
     image: ngrinder/controller
     container_name: controller
     restart: always
-    hostname: controller
+    hostname: ncontroller
     ports: 
       - '8888:80'
       - '16001:16001'
@@ -15,7 +15,7 @@ services:
 
   agent:
     image: ngrinder/agent
-    container_name: agent
+    container_name: nagent
     restart: always
     hostname: agent
     depends_on:    

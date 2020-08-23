@@ -5,5 +5,7 @@ services:
     image: ngrinder/agent
     container_name: agent
     restart: always
-    hostname: agent1
+    hostname: agent2
+    volumes:
+    - ./ngrinder-agent:/opt/ngrinder-agent
     network_mode: 'host'

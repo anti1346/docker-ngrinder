@@ -24,12 +24,12 @@ services:
     depends_on:    
       - controller
 
-  agent2:
-    image: ngrinder/agent:${NGRINDER_VERSION}
-    container_name: agent2
-    restart: always
-    hostname: agent2
-    volumes:
-      - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
-    depends_on:    
-      - controller
+  # agent2:
+  #   image: ngrinder/agent:${NGRINDER_VERSION}
+  #   container_name: agent2
+  #   restart: always
+  #   hostname: agent2
+  #   volumes:
+  #     - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+  #   depends_on:    
+  #     - controller

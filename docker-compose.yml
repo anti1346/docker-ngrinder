@@ -8,7 +8,7 @@ services:
     hostname: controller
     volumes:
       - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
-      - ./ngrinder-controller:/opt/ngrinder-controller
+      - ./ngrinder-data:/opt/ngrinder-controller
     ports: 
       - 8888:80
       - 16001:16001

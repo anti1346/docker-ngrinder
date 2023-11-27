@@ -28,7 +28,7 @@ services:
       - "controller:${CONTROLLER_IP}"
     volumes:
       - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
-      - ./ngrinder-agent-data:/opt/ngrinder-agent
-      #- ./ngrinder-agent-data/agent.conf:/opt/ngrinder-agent/.ngrinder-agent/agent.conf
+      - ./ngrinder-data:/opt/ngrinder-agent
+      #- ./ngrinder-data/agent.conf:/opt/ngrinder-agent/.ngrinder-agent/agent.conf
     network_mode: host
 EOF

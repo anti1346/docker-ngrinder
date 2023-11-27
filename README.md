@@ -1,5 +1,8 @@
 # docker ngrinder
-
+#### docker-ngrinder 다운로드(git clone)
+```
+git clone https://github.com/anti1346/docker-ngrinder.git
+```
 #### ngrinder docker 실행
 ```
 docker-compose up -d

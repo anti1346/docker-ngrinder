@@ -1,22 +1,35 @@
 version: '3.8'
-services:
 
+services:
   controller:
-    image: ngrinder/controller
+    image: ngrinder/controller:${NGRINDER_VERSION}
     container_name: controller
     restart: always
-    hostname: ncontroller
-    ports: 
-      - '8888:80'
-      - '16001:16001'
-      - '12000-12009:12000-12009'
+    hostname: controller
     volumes:
-    - ./ngrinder-controller:/opt/ngrinder-controller
+      - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+      - ./ngrinder-controller:/opt/ngrinder-controller
+    ports: 
+      - 8888:80
+      - 16001:16001
+      - 12000-12009:12000-12009
 
-  agent:
-    image: ngrinder/agent
-    container_name: nagent
+  agent1:
+    image: ngrinder/agent:${NGRINDER_VERSION}
+    container_name: agent1
     restart: always
-    hostname: agent
+    hostname: agent1
+    volumes:
+      - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+    depends_on:    
+      - controller
+
+  agent2:
+    image: ngrinder/agent:${NGRINDER_VERSION}
+    container_name: agent2
+    restart: always
+    hostname: agent2
+    volumes:
+      - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
     depends_on:    
       - controller

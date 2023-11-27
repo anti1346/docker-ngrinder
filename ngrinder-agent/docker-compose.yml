@@ -6,8 +6,8 @@ services:
     container_name: agent
     restart: always
     hostname: agent
-    sysctls:
-      - net.core.somaxconn=65000
+    # sysctls:
+    #   - net.core.somaxconn=65000
     ulimits:
       memlock:
         soft: -1
@@ -20,10 +20,8 @@ services:
         hard: 1024000
     extra_hosts:
       - "controller:${CONTROLLER_IP}"
-    links:
-      - controller
     volumes:
       - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
       - ./ngrinder-agent-data:/opt/ngrinder-agent
       #- ./ngrinder-agent-data/agent.conf:/opt/ngrinder-agent/.ngrinder-agent/agent.conf
-    network_mode: 'host'
+    network_mode: host
